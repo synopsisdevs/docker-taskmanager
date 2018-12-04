@@ -1,0 +1,1 @@
+0 1 * * * /usr/local/bin/php /var/www/html/www/index.php tasks:dailyReport
