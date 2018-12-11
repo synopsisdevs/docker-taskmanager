@@ -1,6 +1,9 @@
 FROM php:7.1-apache
 
 RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN a2ensite 000-default
+RUN a2ensite default-ssl
 
 ENV DEPENDENCIES="libpq-dev libmcrypt-dev python sudo cron zlib1g-dev supervisor"
 ENV TZ Europe/Prague
