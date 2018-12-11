@@ -5,7 +5,7 @@ RUN a2enmod ssl
 RUN a2ensite 000-default
 RUN a2ensite default-ssl
 
-ENV DEPENDENCIES="libpq-dev libmcrypt-dev python sudo cron zlib1g-dev supervisor"
+ENV DEPENDENCIES="libpq-dev libmcrypt-dev python sudo cron zlib1g-dev supervisor ssl-cert"
 ENV TZ Europe/Prague
 
 RUN sed -i  "s/http:\/\/httpredir\.debian\.org\/debian/ftp:\/\/ftp\.debian\.org\/debian/g" /etc/apt/sources.list
